@@ -36,3 +36,22 @@ if (toggleMenuButton && navbarMenu && navbarMenuLinks.length) {
 /**
  * Scroll Reveal Animation
  */
+import ScrollReveal from 'scrollreveal';
+
+const headerTextItems: Array<string> = [
+	'header-title',
+	'header-subtitle',
+	'header-links',
+];
+
+for (let i = 0; i < headerTextItems.length; i++) {
+	ScrollReveal().reveal(`.${headerTextItems[i]}`, {
+		reset: false,
+		opacity: 0,
+		easing: 'ease-in-out',
+		origin: 'bottom',
+		distance: '30%',
+		duration: 1550,
+		delay: (i + 1) * 350,
+	});
+}
