@@ -32,3 +32,7 @@ if (toggleMenuButton && navbarMenu && navbarMenuLinks.length) {
 		})
 	);
 }
+
+/**
+ * Scroll Reveal Animation
+ */
