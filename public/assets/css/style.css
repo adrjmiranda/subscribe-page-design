@@ -1,0 +1,207 @@
+/***************** Imports *******************/
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+/***************** Variables *******************/
+:root {
+	/* Colors */
+	--white-color-00: #ffffff;
+	--black-color-00: #000000;
+
+	/* Font Family */
+	--title-ff: 'Teko', serif;
+	--text-ff: 'DM Sans', sans-serif;
+
+	/* Font Size */
+	--base-fs: 1.1rem;
+	--lg-fs: 1.55rem;
+	--xxl-fs: 2.95rem;
+
+	/* Font Weight */
+	--normal-fw: 400;
+	--medium-fw: 500;
+	--bold-fw: 700;
+
+	/* Width */
+	--container-mw: 1280px;
+	--container-pi: 0.85rem;
+
+	/* Border Radius */
+	--light-radius: 0.35rem;
+}
+
+/***************** General *******************/
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: var(--text-ff);
+}
+
+html,
+body {
+	scroll-behavior: smooth;
+}
+
+body {
+	overflow-x: hidden;
+	color: var(--white-color-00);
+}
+
+a,
+button {
+	color: inherit;
+	font-size: var(--base-fs);
+}
+
+a {
+	text-decoration: none;
+}
+
+button {
+	background-color: transparent;
+	outline: none;
+	border: none;
+}
+
+ul {
+	list-style: none;
+}
+
+/***************** Reusable *******************/
+.container {
+	max-width: var(--container-mw);
+	padding-inline: var(--container-pi);
+	margin: 0 auto;
+}
+
+.logo {
+	position: relative;
+}
+
+.logo i {
+	position: absolute;
+	font-size: var(--lg-fs);
+	transform: translate(-50%, -50%);
+	top: 50%;
+}
+
+.logo i:nth-child(1) {
+	left: 0;
+	z-index: 10;
+}
+
+.logo i:nth-child(2) {
+	left: 0.45rem;
+	z-index: 20;
+}
+
+.logo i:nth-child(3) {
+	left: 0.9rem;
+	z-index: 30;
+}
+
+.logo span {
+	margin-left: 1.85rem;
+	font-family: var(--title-ff);
+	font-size: var(--lg-fs);
+}
+
+.btn {
+	border-radius: var(--light-radius);
+	border: 2px solid var(--white-color-00);
+	padding: 0.85rem 2.85rem;
+	font-weight: var(--medium-fw);
+	text-transform: capitalize;
+	text-align: center;
+	transition: 0.35s ease-in-out;
+}
+
+.btn:hover {
+	background-color: var(--white-color-00);
+	color: var(--black-color-00);
+}
+
+/***************** HOME *******************/
+#home {
+	background-image: linear-gradient(
+			to bottom,
+			rgba(0, 0, 0, 0.62),
+			rgba(0, 0, 0, 0.82)
+		),
+		url('../img/gamer-computer.jpg');
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	position: relative;
+	z-index: 0;
+}
+
+/***************** NAVBAR *******************/
+#navbar {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 80px;
+	width: 100%;
+}
+
+.navbar-content {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 100%;
+}
+
+#toggle-menu {
+	display: none;
+	justify-content: center;
+	align-items: center;
+	font-size: var(--lg-fs);
+}
+
+.navbar-menu {
+	display: flex;
+	gap: 1.75rem;
+	align-items: center;
+}
+
+.navbar-link {
+	font-weight: var(--medium-fw);
+	border: 2px solid var(--white-color-00);
+	padding: 0.25rem 0.75rem;
+	border-radius: var(--light-radius);
+}
+/************** End of NAVBAR ***************/
+
+/***************** HEADER *******************/
+.header-content {
+	padding-top: 80px;
+	min-height: 100vh;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 0.85rem;
+}
+
+.header-title,
+.header-title span {
+	font-family: var(--title-ff);
+	font-size: var(--xxl-fs);
+}
+
+.header-subtitle {
+	font-size: var(--lg-fs);
+}
+
+.header-links {
+	margin-top: 3.75rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 1.25rem;
+}
+/************** End of HEADER ***************/
+/************** End of HOME ***************/
